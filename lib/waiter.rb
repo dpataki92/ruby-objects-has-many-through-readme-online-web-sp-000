@@ -45,7 +45,7 @@ class Waiter
     most_frequent[0]
   end
 
-  def average_tips
+  def self.average_tips
     most_experienced_tips = []
     least_experienced_tips = []
     most_experienced = Waiter.all.max do |waiter_1, waiter_2|
