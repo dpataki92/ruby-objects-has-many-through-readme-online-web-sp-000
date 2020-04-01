@@ -31,4 +31,22 @@ class Waiter
 
     best_tipped_meal.customer
   end
+
+  def most_frequent_customer
+    frequenter_table = {}
+    meals.each do |meal|
+      if frequenter_table[meal.customer.name] == nil
+        frequenter_table[meal.customer.name] = 1
+      else
+        frequenter_table[meal.customer.name] += 1
+      end
+    end
+    most_frequent = frequenter_table.max_by {|k,v| v}
+    most_frequent[0]
+  end
+
+
+
+
+
 end
