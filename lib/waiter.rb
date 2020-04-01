@@ -51,17 +51,14 @@ class Waiter
     most_experienced = 0
     least_experienced = 0
     Waiter.all.each do |waiter|
-      all_tips = waiter.meals.collect {|meal| meal.tip}
       if waiter.yrs_experience > most_experienced
         most_experienced = waiter.yrs_experience
-        most_experienced_tips = all_tips
+        waiter.meals.each {|meal| most_experienced_tips << meal.tip}
       elsif waiter.yrs_experience < least_experienced
         least_experienced = waiter.yrs_experience
-        least_experienced_tips = all_tips
+        waiter.meals.each {|meal| least_experienced_tips << meal.tip}
       end
     end
-    puts most_experienced_tips
-    puts least_experienced_tips
     "The average tips for the most experienced waiter is #{most_experienced_tips.sum / most_experienced_tips.length}$."
     "The average tips for the least experienced waiter is #{least_experienced_tips.sum / least_experienced_tips.length}$."
   end
