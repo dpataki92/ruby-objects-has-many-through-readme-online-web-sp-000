@@ -66,4 +66,3 @@ class Waiter
   end
 
 end
-
