@@ -61,8 +61,8 @@ class Waiter
         least_experienced_tips << meal.tip
       end
     end
-    puts "The average tips for the most experienced waiter is = #{most_experienced_tips.sum / most_experienced_tips.length}"
-    puts "The average tips for the least experienced waiter is = #{least_experienced_tips.sum / least_experienced_tips.length}"
+    puts "The average tips for the most experienced waiter is #{most_experienced_tips.sum / most_experienced_tips.length}$."
+    puts "The average tips for the least experienced waiter is #{least_experienced_tips.sum / least_experienced_tips.length}$."
   end
 
 end
