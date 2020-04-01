@@ -58,7 +58,7 @@ class Waiter
       if meal.waiter == most_experienced
         most_experienced_tips << meal.tip
       elsif meal.waiter == least_experienced
-        least_experienced_tips <í meal.tip
+        least_experienced_tips << meal.tip
       end
     end
     puts "The average tips for the most experienced waiter is = #{most_experienced_tips.sum / most_experienced_tips.length}"
