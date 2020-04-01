@@ -48,8 +48,8 @@ class Waiter
   def self.average_tips
     most_experienced_tips = []
     least_experienced_tips = []
-    most_experienced = 0
-    least_experienced = 0
+    most_experienced = 1
+    least_experienced = 1
     Waiter.all.each do |waiter|
       all_tips = waiter.meals.collect {|meal| meal.tip}
       if waiter.yrs_experience > most_experienced
