@@ -67,18 +67,3 @@ class Waiter
 
 end
 
-
-jason = Waiter.new("Jason", 4)
-robert = Waiter.new("Robert", 2)
-carlos = Waiter.new("Carlos", 3)
-lisa = Customer.new("Lisa", 24)
-tim = Customer.new("Tim", 35)
-terrance = Customer.new("Terrance", 27)
-
-terrance.new_meal(jason, 50, 3)
-lisa.new_meal(jason, 40, 10)
-tim.new_meal(jason, 45, 8)
-tim.new_meal(jason, 45, 7)
-terrance.new_meal(robert, 40)
-lisa.new_meal(robert, 32, 5)
-tim.new_meal(robert, 70, 6)
