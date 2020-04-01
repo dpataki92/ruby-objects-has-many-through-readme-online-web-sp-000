@@ -49,10 +49,10 @@ class Waiter
     most_experienced_tips = []
     least_experienced_tips = []
     most_experienced = Waiter.all.max do |waiter_1, waiter_2|
-      waiter_1.yrs_experience <==> waiter_2.yrs_experience
+      waiter_1.yrs_experience <=> waiter_2.yrs_experience
     end
     least_experienced = Waiter.all.min do |waiter_1, waiter_2|
-      waiter_1.yrs_experience <==> waiter_2.yrs_experience
+      waiter_1.yrs_experience <=> waiter_2.yrs_experience
     end
     meals.each do |meal|
       if meal.waiter == most_experienced
