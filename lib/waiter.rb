@@ -56,7 +56,7 @@ class Waiter
     end
     meals.each do |meal|
       if meal.waiter == most_experienced
-        most_experienced_tips << meal.tip 
+        most_experienced_tips << meal.tip
       elsif meal.waiter == least_experienced
         least_experienced_tips <í meal.tip
       end
@@ -64,7 +64,7 @@ class Waiter
     puts "The average tips for the most experienced waiter is = #{most_experienced_tips.sum / most_experienced_tips.length}"
     puts "The average tips for the least experienced waiter is = #{least_experienced_tips.sum / least_experienced_tips.length}"
   end
-  
+
 
 
 
