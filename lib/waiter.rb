@@ -60,6 +60,8 @@ class Waiter
         least_experienced_tips = all_tips
       end
     end
+    puts most_experienced_tips
+    puts least_experienced_tips
     "The average tips for the most experienced waiter is #{most_experienced_tips.sum / most_experienced_tips.length}$."
     "The average tips for the least experienced waiter is #{least_experienced_tips.sum / least_experienced_tips.length}$."
   end
